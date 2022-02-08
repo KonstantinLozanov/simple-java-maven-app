@@ -46,7 +46,10 @@ spec:
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                sh """
+                    chmod 755 ./jenkins/scripts/deliver.sh
+                   ./jenkins/scripts/deliver.sh
+                   """
             }
         }
     }
