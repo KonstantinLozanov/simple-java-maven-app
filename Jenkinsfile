@@ -50,4 +50,11 @@ spec:
             }
         }
     }
+    post {
+        always {
+            script {
+                logstashSend failBuild: false
+            }
+        }
+    }    
 }
